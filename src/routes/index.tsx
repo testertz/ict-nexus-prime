@@ -30,18 +30,18 @@ const stats = [
 ];
 
 const reasons = [
-  { icon: Rocket, title: "Ship Real Products", desc: "Move beyond classroom theory — build, deploy and maintain real software used by real people.", gradient: "from-cyber to-indigo" },
-  { icon: Brain, title: "Learn from Mentors", desc: "Pair-programming and code reviews from senior students, faculty, and industry engineers.", gradient: "from-indigo to-violet" },
-  { icon: Trophy, title: "Win Competitions", desc: "Represent CBE at national and continental hackathons, datathons, and pitch competitions.", gradient: "from-violet to-cyber" },
-  { icon: Globe, title: "Build a Network", desc: "Connect with alumni placed at Google, Microsoft, Andela, Vodacom, and Tanzania's top startups.", gradient: "from-success to-cyber" },
-  { icon: Award, title: "Earn Certifications", desc: "Track your progress, collect verifiable skill badges, and graduate with a portfolio that hires you.", gradient: "from-warning to-violet" },
-  { icon: Zap, title: "Lead Innovation", desc: "Pitch a startup, lead a research squad, or mentor freshers — your initiative defines your role.", gradient: "from-cyber to-success" },
+  { icon: Rocket, title: "Ship Real Products", desc: "Move beyond classroom theory — build, deploy and maintain real software used by real people." },
+  { icon: Brain, title: "Learn from Mentors", desc: "Pair-programming and code reviews from senior students, faculty, and industry engineers." },
+  { icon: Trophy, title: "Win Competitions", desc: "Represent CBE at national and continental hackathons, datathons, and pitch competitions." },
+  { icon: Globe, title: "Build a Network", desc: "Connect with alumni placed at Google, Microsoft, Andela, Vodacom, and Tanzania's top startups." },
+  { icon: Award, title: "Earn Certifications", desc: "Track your progress, collect verifiable skill badges, and graduate with a portfolio that hires you." },
+  { icon: Zap, title: "Lead Innovation", desc: "Pitch a startup, lead a research squad, or mentor freshers — your initiative defines your role." },
 ];
 
 const projects = [
-  { title: "SmartCampus AI", category: "AI / ML", desc: "Computer-vision attendance & smart-classroom analytics for CBE lecture halls.", tech: ["Python", "TensorFlow", "FastAPI"], color: "from-cyber to-indigo" },
-  { title: "Soko Connect", category: "Mobile App", desc: "Hyperlocal marketplace connecting Tanzanian SMEs with student talent and services.", tech: ["React Native", "Node", "Postgres"], color: "from-violet to-indigo" },
-  { title: "CyberShield TZ", category: "Cybersecurity", desc: "Open-source threat-intel dashboard tailored to East African financial institutions.", tech: ["Go", "Elastic", "Next.js"], color: "from-success to-cyber" },
+  { title: "SmartCampus AI", category: "AI / ML", desc: "Computer-vision attendance & smart-classroom analytics for CBE lecture halls.", tech: ["Python", "TensorFlow", "FastAPI"] },
+  { title: "Soko Connect", category: "Mobile App", desc: "Hyperlocal marketplace connecting Tanzanian SMEs with student talent and services.", tech: ["React Native", "Node", "Postgres"] },
+  { title: "CyberShield TZ", category: "Cybersecurity", desc: "Open-source threat-intel dashboard tailored to East African financial institutions.", tech: ["Go", "Elastic", "Next.js"] },
 ];
 
 const events = [
@@ -69,10 +69,10 @@ function Home() {
           <div className="absolute inset-0 grid-bg opacity-40" />
         </div>
 
-        {/* floating orbs */}
-        <div className="absolute top-32 left-10 h-72 w-72 rounded-full bg-cyber/30 blur-3xl animate-float-slow" />
-        <div className="absolute bottom-20 right-10 h-96 w-96 rounded-full bg-violet/30 blur-3xl animate-float" />
-        <div className="absolute top-1/2 left-1/3 h-64 w-64 rounded-full bg-indigo/20 blur-3xl animate-float-slow" />
+        {/* subtle decorative accents */}
+        <div className="absolute top-32 left-10 h-72 w-72 rounded-full bg-primary/10 blur-3xl animate-float-slow" />
+        <div className="absolute bottom-20 right-10 h-96 w-96 rounded-full bg-primary/10 blur-3xl animate-float" />
+
 
         <div className="relative mx-auto max-w-7xl px-4 text-center">
           <motion.div
@@ -135,11 +135,10 @@ function Home() {
               key={r.title}
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
-              className="group glass rounded-2xl p-6 hover:shadow-elevated transition-all relative overflow-hidden"
+              className="group glass rounded-2xl p-6 hover:border-primary/40 transition-all relative overflow-hidden"
             >
-              <div className={`absolute -top-12 -right-12 h-32 w-32 rounded-full bg-gradient-to-br ${r.gradient} opacity-20 blur-2xl group-hover:opacity-40 transition-opacity`} />
-              <div className={`relative h-11 w-11 rounded-xl bg-gradient-to-br ${r.gradient} flex items-center justify-center mb-4`}>
-                <r.icon className="h-5 w-5 text-primary-foreground" />
+              <div className="relative h-11 w-11 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
+                <r.icon className="h-5 w-5 text-primary" />
               </div>
               <h3 className="font-display text-lg font-semibold mb-2">{r.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{r.desc}</p>
@@ -156,12 +155,12 @@ function Home() {
               key={p.title}
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group glass rounded-2xl overflow-hidden hover:shadow-elevated transition-all"
+              className="group glass rounded-2xl overflow-hidden hover:border-primary/40 transition-all"
             >
-              <div className={`h-44 bg-gradient-to-br ${p.color} relative overflow-hidden`}>
-                <div className="absolute inset-0 grid-bg opacity-30" />
+              <div className="h-44 bg-muted relative overflow-hidden border-b border-border/40">
+                <div className="absolute inset-0 grid-bg opacity-40" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <Code2 className="h-16 w-16 text-primary-foreground/70 group-hover:scale-110 transition-transform" />
+                  <Code2 className="h-16 w-16 text-primary/60 group-hover:scale-110 transition-transform" />
                 </div>
                 <div className="absolute top-3 left-3 px-2.5 py-1 rounded-md glass text-[10px] font-semibold uppercase tracking-wider">{p.category}</div>
               </div>
@@ -286,9 +285,7 @@ function Home() {
       {/* CTA */}
       <Section>
         <div className="relative rounded-3xl overflow-hidden glass-strong p-10 sm:p-16 text-center">
-          <div className="absolute inset-0 bg-aurora opacity-20" />
-          <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-cyber/40 blur-3xl" />
-          <div className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-violet/40 blur-3xl" />
+
           <div className="relative">
             <Sparkles className="h-10 w-10 text-primary mx-auto mb-5 animate-pulse" />
             <h2 className="font-display text-4xl sm:text-5xl font-bold mb-4">Ready to build the future?</h2>
