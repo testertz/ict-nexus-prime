@@ -155,12 +155,12 @@ function Home() {
               key={p.title}
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group glass rounded-2xl overflow-hidden hover:shadow-elevated transition-all"
+              className="group glass rounded-2xl overflow-hidden hover:border-primary/40 transition-all"
             >
-              <div className={`h-44 bg-gradient-to-br ${p.color} relative overflow-hidden`}>
-                <div className="absolute inset-0 grid-bg opacity-30" />
+              <div className="h-44 bg-muted relative overflow-hidden border-b border-border/40">
+                <div className="absolute inset-0 grid-bg opacity-40" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <Code2 className="h-16 w-16 text-primary-foreground/70 group-hover:scale-110 transition-transform" />
+                  <Code2 className="h-16 w-16 text-primary/60 group-hover:scale-110 transition-transform" />
                 </div>
                 <div className="absolute top-3 left-3 px-2.5 py-1 rounded-md glass text-[10px] font-semibold uppercase tracking-wider">{p.category}</div>
               </div>
