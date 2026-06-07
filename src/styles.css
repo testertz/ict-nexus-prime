@@ -133,10 +133,10 @@
   --surface: oklch(1 0 0);
   --surface-elevated: oklch(0.98 0.005 250);
 
-  --glass-bg: oklch(1 0 0 / 0.75);
-  --glass-bg-strong: oklch(1 0 0 / 0.92);
-  --glass-border: oklch(0.18 0.03 260 / 0.08);
-  --grid-line: oklch(0.18 0.03 260 / 0.05);
+  --glass-bg: oklch(1 0 0 / 0.7);
+  --glass-bg-strong: oklch(1 0 0 / 0.9);
+  --glass-border: oklch(0.18 0.03 260 / 0.12);
+  --grid-line: oklch(0.18 0.03 260 / 0.06);
 
   --sidebar: oklch(1 0 0);
   --sidebar-foreground: oklch(0.18 0.03 260);
