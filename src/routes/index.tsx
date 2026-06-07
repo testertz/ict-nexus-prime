@@ -69,10 +69,10 @@ function Home() {
           <div className="absolute inset-0 grid-bg opacity-40" />
         </div>
 
-        {/* floating orbs */}
-        <div className="absolute top-32 left-10 h-72 w-72 rounded-full bg-cyber/30 blur-3xl animate-float-slow" />
-        <div className="absolute bottom-20 right-10 h-96 w-96 rounded-full bg-violet/30 blur-3xl animate-float" />
-        <div className="absolute top-1/2 left-1/3 h-64 w-64 rounded-full bg-indigo/20 blur-3xl animate-float-slow" />
+        {/* subtle decorative accents */}
+        <div className="absolute top-32 left-10 h-72 w-72 rounded-full bg-primary/10 blur-3xl animate-float-slow" />
+        <div className="absolute bottom-20 right-10 h-96 w-96 rounded-full bg-primary/10 blur-3xl animate-float" />
+
 
         <div className="relative mx-auto max-w-7xl px-4 text-center">
           <motion.div
