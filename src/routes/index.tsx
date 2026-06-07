@@ -135,11 +135,10 @@ function Home() {
               key={r.title}
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
-              className="group glass rounded-2xl p-6 hover:shadow-elevated transition-all relative overflow-hidden"
+              className="group glass rounded-2xl p-6 hover:border-primary/40 transition-all relative overflow-hidden"
             >
-              <div className={`absolute -top-12 -right-12 h-32 w-32 rounded-full bg-gradient-to-br ${r.gradient} opacity-20 blur-2xl group-hover:opacity-40 transition-opacity`} />
-              <div className={`relative h-11 w-11 rounded-xl bg-gradient-to-br ${r.gradient} flex items-center justify-center mb-4`}>
-                <r.icon className="h-5 w-5 text-primary-foreground" />
+              <div className="relative h-11 w-11 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
+                <r.icon className="h-5 w-5 text-primary" />
               </div>
               <h3 className="font-display text-lg font-semibold mb-2">{r.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{r.desc}</p>
