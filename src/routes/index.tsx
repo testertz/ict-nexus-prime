@@ -30,18 +30,18 @@ const stats = [
 ];
 
 const reasons = [
-  { icon: Rocket, title: "Ship Real Products", desc: "Move beyond classroom theory — build, deploy and maintain real software used by real people.", gradient: "from-cyber to-indigo" },
-  { icon: Brain, title: "Learn from Mentors", desc: "Pair-programming and code reviews from senior students, faculty, and industry engineers.", gradient: "from-indigo to-violet" },
-  { icon: Trophy, title: "Win Competitions", desc: "Represent CBE at national and continental hackathons, datathons, and pitch competitions.", gradient: "from-violet to-cyber" },
-  { icon: Globe, title: "Build a Network", desc: "Connect with alumni placed at Google, Microsoft, Andela, Vodacom, and Tanzania's top startups.", gradient: "from-success to-cyber" },
-  { icon: Award, title: "Earn Certifications", desc: "Track your progress, collect verifiable skill badges, and graduate with a portfolio that hires you.", gradient: "from-warning to-violet" },
-  { icon: Zap, title: "Lead Innovation", desc: "Pitch a startup, lead a research squad, or mentor freshers — your initiative defines your role.", gradient: "from-cyber to-success" },
+  { icon: Rocket, title: "Ship Real Products", desc: "Move beyond classroom theory — build, deploy and maintain real software used by real people." },
+  { icon: Brain, title: "Learn from Mentors", desc: "Pair-programming and code reviews from senior students, faculty, and industry engineers." },
+  { icon: Trophy, title: "Win Competitions", desc: "Represent CBE at national and continental hackathons, datathons, and pitch competitions." },
+  { icon: Globe, title: "Build a Network", desc: "Connect with alumni placed at Google, Microsoft, Andela, Vodacom, and Tanzania's top startups." },
+  { icon: Award, title: "Earn Certifications", desc: "Track your progress, collect verifiable skill badges, and graduate with a portfolio that hires you." },
+  { icon: Zap, title: "Lead Innovation", desc: "Pitch a startup, lead a research squad, or mentor freshers — your initiative defines your role." },
 ];
 
 const projects = [
-  { title: "SmartCampus AI", category: "AI / ML", desc: "Computer-vision attendance & smart-classroom analytics for CBE lecture halls.", tech: ["Python", "TensorFlow", "FastAPI"], color: "from-cyber to-indigo" },
-  { title: "Soko Connect", category: "Mobile App", desc: "Hyperlocal marketplace connecting Tanzanian SMEs with student talent and services.", tech: ["React Native", "Node", "Postgres"], color: "from-violet to-indigo" },
-  { title: "CyberShield TZ", category: "Cybersecurity", desc: "Open-source threat-intel dashboard tailored to East African financial institutions.", tech: ["Go", "Elastic", "Next.js"], color: "from-success to-cyber" },
+  { title: "SmartCampus AI", category: "AI / ML", desc: "Computer-vision attendance & smart-classroom analytics for CBE lecture halls.", tech: ["Python", "TensorFlow", "FastAPI"] },
+  { title: "Soko Connect", category: "Mobile App", desc: "Hyperlocal marketplace connecting Tanzanian SMEs with student talent and services.", tech: ["React Native", "Node", "Postgres"] },
+  { title: "CyberShield TZ", category: "Cybersecurity", desc: "Open-source threat-intel dashboard tailored to East African financial institutions.", tech: ["Go", "Elastic", "Next.js"] },
 ];
 
 const events = [
