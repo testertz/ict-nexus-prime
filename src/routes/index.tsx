@@ -285,9 +285,7 @@ function Home() {
       {/* CTA */}
       <Section>
         <div className="relative rounded-3xl overflow-hidden glass-strong p-10 sm:p-16 text-center">
-          <div className="absolute inset-0 bg-aurora opacity-20" />
-          <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-cyber/40 blur-3xl" />
-          <div className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-violet/40 blur-3xl" />
+
           <div className="relative">
             <Sparkles className="h-10 w-10 text-primary mx-auto mb-5 animate-pulse" />
             <h2 className="font-display text-4xl sm:text-5xl font-bold mb-4">Ready to build the future?</h2>
