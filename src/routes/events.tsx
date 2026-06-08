@@ -136,7 +136,7 @@ function Events() {
 
       {/* Past */}
       <Section eyebrow="Past Events" title="From the archives.">
-        <div className="glass rounded-2xl divide-y divide-border/40">
+        <div className="bg-card border border-border rounded-2xl divide-y divide-border/40">
           {past.map((p) => (
             <div key={p.title} className="flex items-center gap-4 sm:gap-6 p-5 hover:bg-muted/20 transition-colors">
               <div className="text-center w-16 shrink-0">
