@@ -70,9 +70,7 @@ function Events() {
 
       {/* Featured / Countdown */}
       <Section>
-        <div className="relative rounded-3xl overflow-hidden glass-strong p-8 sm:p-12">
-          <div className="absolute inset-0 bg-aurora opacity-20" />
-          <div className="absolute -top-32 -right-32 h-80 w-80 rounded-full bg-violet/40 blur-3xl" />
+        <div className="relative rounded-3xl overflow-hidden bg-surface-elevated border border-border p-8 sm:p-12">
           <div className="relative grid lg:grid-cols-2 gap-10 items-center">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass text-xs font-semibold text-primary mb-4">
