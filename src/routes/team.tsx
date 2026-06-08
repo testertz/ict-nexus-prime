@@ -45,11 +45,10 @@ function Team() {
               key={m.name}
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
-              className="group relative glass rounded-2xl p-6 hover:shadow-elevated hover:-translate-y-1 transition-all overflow-hidden"
+              className="group relative bg-card border border-border rounded-2xl p-6 hover:border-primary/40 hover:-translate-y-1 transition-all overflow-hidden"
             >
-              <div className={`absolute -top-16 -right-16 h-40 w-40 rounded-full bg-gradient-to-br ${m.gradient} opacity-25 blur-2xl group-hover:opacity-50 transition-opacity`} />
               <div className="relative">
-                <div className={`h-20 w-20 rounded-2xl bg-gradient-to-br ${m.gradient} flex items-center justify-center text-primary-foreground font-display font-bold text-2xl mb-4 glow-primary`}>
+                <div className="h-20 w-20 rounded-2xl bg-primary flex items-center justify-center text-primary-foreground font-display font-bold text-2xl mb-4">
                   {m.name.split(" ").map(n => n[0]).join("")}
                 </div>
                 <div className="text-xs font-semibold uppercase tracking-wider text-primary mb-1">{m.role}</div>
@@ -63,7 +62,7 @@ function Team() {
                 <div className="flex items-center justify-between pt-4 border-t border-border/40">
                   <div className="flex gap-1.5">
                     {[Github, Linkedin, Twitter].map((Icon, k) => (
-                      <a key={k} href="#" aria-label="social" className="h-7 w-7 rounded-md glass flex items-center justify-center hover:text-primary transition-colors">
+                      <a key={k} href="#" aria-label="social" className="h-7 w-7 rounded-md bg-muted border border-border flex items-center justify-center hover:text-primary hover:border-primary/40 transition-colors">
                         <Icon className="h-3.5 w-3.5" />
                       </a>
                     ))}

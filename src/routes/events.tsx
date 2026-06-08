@@ -70,9 +70,7 @@ function Events() {
 
       {/* Featured / Countdown */}
       <Section>
-        <div className="relative rounded-3xl overflow-hidden glass-strong p-8 sm:p-12">
-          <div className="absolute inset-0 bg-aurora opacity-20" />
-          <div className="absolute -top-32 -right-32 h-80 w-80 rounded-full bg-violet/40 blur-3xl" />
+        <div className="relative rounded-3xl overflow-hidden bg-surface-elevated border border-border p-8 sm:p-12">
           <div className="relative grid lg:grid-cols-2 gap-10 items-center">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass text-xs font-semibold text-primary mb-4">
@@ -86,7 +84,7 @@ function Events() {
                 <div className="flex items-center gap-2"><MapPin className="h-4 w-4 text-primary" />{featured.venue}</div>
                 <div className="flex items-center gap-2"><User className="h-4 w-4 text-primary" />{featured.speaker}</div>
               </div>
-              <Button size="lg" className="bg-aurora text-primary-foreground font-semibold glow-primary">Register Free</Button>
+              <Button size="lg" className="bg-primary text-primary-foreground font-semibold hover:bg-primary/90">Register Free</Button>
             </div>
             <div className="grid grid-cols-4 gap-3">
               {[
@@ -95,8 +93,8 @@ function Events() {
                 { label: "Mins", value: c.mins },
                 { label: "Secs", value: c.secs },
               ].map((u) => (
-                <div key={u.label} className="glass rounded-2xl p-4 text-center">
-                  <div className="font-display text-3xl sm:text-5xl font-bold text-gradient">{String(u.value).padStart(2, "0")}</div>
+                <div key={u.label} className="bg-surface border border-border rounded-2xl p-4 text-center">
+                  <div className="font-display text-3xl sm:text-5xl font-bold text-primary">{String(u.value).padStart(2, "0")}</div>
                   <div className="text-[10px] uppercase tracking-wider text-muted-foreground mt-1">{u.label}</div>
                 </div>
               ))}
@@ -113,12 +111,12 @@ function Events() {
               key={e.title}
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
-              className="group glass rounded-2xl overflow-hidden hover:shadow-elevated transition-all"
+              className="group bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/40 transition-all"
             >
-              <div className={`h-32 bg-gradient-to-br ${e.color} relative`}>
+              <div className="h-32 bg-muted relative border-b border-border">
                 <div className="absolute inset-0 grid-bg opacity-30" />
-                <div className="absolute top-3 right-3 px-2 py-1 rounded-md glass text-[10px] font-semibold uppercase">{e.tag}</div>
-                <div className="absolute bottom-3 left-3 glass rounded-xl px-3 py-2 text-center">
+                <div className="absolute top-3 right-3 px-2 py-1 rounded-md bg-background/80 border border-border text-[10px] font-semibold uppercase">{e.tag}</div>
+                <div className="absolute bottom-3 left-3 bg-background border border-border rounded-xl px-3 py-2 text-center">
                   <div className="text-[10px] text-primary font-semibold">{e.date.split(" ")[0]}</div>
                   <div className="font-display text-2xl font-bold">{e.date.split(" ")[1]}</div>
                 </div>
@@ -129,7 +127,7 @@ function Events() {
                   <div className="flex items-center gap-1.5"><MapPin className="h-3 w-3" />{e.venue}</div>
                   <div className="flex items-center gap-1.5"><User className="h-3 w-3" />{e.speaker}</div>
                 </div>
-                <Button size="sm" className="w-full bg-aurora text-primary-foreground">Register</Button>
+                <Button size="sm" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">Register</Button>
               </div>
             </motion.div>
           ))}
@@ -138,7 +136,7 @@ function Events() {
 
       {/* Past */}
       <Section eyebrow="Past Events" title="From the archives.">
-        <div className="glass rounded-2xl divide-y divide-border/40">
+        <div className="bg-card border border-border rounded-2xl divide-y divide-border/40">
           {past.map((p) => (
             <div key={p.title} className="flex items-center gap-4 sm:gap-6 p-5 hover:bg-muted/20 transition-colors">
               <div className="text-center w-16 shrink-0">
