@@ -63,7 +63,7 @@ function Projects() {
 
       <Section>
         {/* Controls */}
-        <div className="glass rounded-2xl p-4 mb-8">
+        <div className="bg-card border border-border rounded-2xl p-4 mb-8">
           <div className="flex flex-col md:flex-row gap-4">
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
