@@ -127,7 +127,7 @@ function Events() {
                   <div className="flex items-center gap-1.5"><MapPin className="h-3 w-3" />{e.venue}</div>
                   <div className="flex items-center gap-1.5"><User className="h-3 w-3" />{e.speaker}</div>
                 </div>
-                <Button size="sm" className="w-full bg-aurora text-primary-foreground">Register</Button>
+                <Button size="sm" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">Register</Button>
               </div>
             </motion.div>
           ))}
