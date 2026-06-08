@@ -84,7 +84,7 @@ function Events() {
                 <div className="flex items-center gap-2"><MapPin className="h-4 w-4 text-primary" />{featured.venue}</div>
                 <div className="flex items-center gap-2"><User className="h-4 w-4 text-primary" />{featured.speaker}</div>
               </div>
-              <Button size="lg" className="bg-aurora text-primary-foreground font-semibold glow-primary">Register Free</Button>
+              <Button size="lg" className="bg-primary text-primary-foreground font-semibold hover:bg-primary/90">Register Free</Button>
             </div>
             <div className="grid grid-cols-4 gap-3">
               {[
@@ -93,8 +93,8 @@ function Events() {
                 { label: "Mins", value: c.mins },
                 { label: "Secs", value: c.secs },
               ].map((u) => (
-                <div key={u.label} className="glass rounded-2xl p-4 text-center">
-                  <div className="font-display text-3xl sm:text-5xl font-bold text-gradient">{String(u.value).padStart(2, "0")}</div>
+                <div key={u.label} className="bg-surface border border-border rounded-2xl p-4 text-center">
+                  <div className="font-display text-3xl sm:text-5xl font-bold text-primary">{String(u.value).padStart(2, "0")}</div>
                   <div className="text-[10px] uppercase tracking-wider text-muted-foreground mt-1">{u.label}</div>
                 </div>
               ))}
@@ -111,12 +111,12 @@ function Events() {
               key={e.title}
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
-              className="group glass rounded-2xl overflow-hidden hover:shadow-elevated transition-all"
+              className="group bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/40 transition-all"
             >
-              <div className={`h-32 bg-gradient-to-br ${e.color} relative`}>
+              <div className="h-32 bg-muted relative border-b border-border">
                 <div className="absolute inset-0 grid-bg opacity-30" />
-                <div className="absolute top-3 right-3 px-2 py-1 rounded-md glass text-[10px] font-semibold uppercase">{e.tag}</div>
-                <div className="absolute bottom-3 left-3 glass rounded-xl px-3 py-2 text-center">
+                <div className="absolute top-3 right-3 px-2 py-1 rounded-md bg-background/80 border border-border text-[10px] font-semibold uppercase">{e.tag}</div>
+                <div className="absolute bottom-3 left-3 bg-background border border-border rounded-xl px-3 py-2 text-center">
                   <div className="text-[10px] text-primary font-semibold">{e.date.split(" ")[0]}</div>
                   <div className="font-display text-2xl font-bold">{e.date.split(" ")[1]}</div>
                 </div>
