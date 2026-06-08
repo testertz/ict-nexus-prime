@@ -101,12 +101,12 @@ function Projects() {
               layout
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: i * 0.04 }}
-              className="group glass rounded-2xl overflow-hidden hover:shadow-elevated transition-all"
+              className="group bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/40 transition-all"
             >
-              <div className={`relative h-40 bg-gradient-to-br ${p.color} overflow-hidden`}>
+              <div className="relative h-40 bg-muted border-b border-border overflow-hidden">
                 <div className="absolute inset-0 grid-bg opacity-30" />
-                <Code2 className="absolute inset-0 m-auto h-14 w-14 text-primary-foreground/70 group-hover:scale-110 transition-transform" />
-                <div className="absolute top-3 left-3 px-2 py-1 rounded-md glass text-[10px] font-semibold uppercase">{p.category}</div>
+                <Code2 className="absolute inset-0 m-auto h-14 w-14 text-primary/60 group-hover:scale-110 transition-transform" />
+                <div className="absolute top-3 left-3 px-2 py-1 rounded-md bg-background/80 border border-border text-[10px] font-semibold uppercase">{p.category}</div>
                 {p.trending && (
                   <div className="absolute top-3 right-3 px-2 py-1 rounded-md bg-warning/90 text-warning-foreground text-[10px] font-bold uppercase flex items-center gap-1">
                     <TrendingUp className="h-3 w-3" /> Trending
