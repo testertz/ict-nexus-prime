@@ -80,10 +80,10 @@ function Projects() {
               <button
                 key={c.name}
                 onClick={() => setActive(c.name)}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all border ${
                   active === c.name
-                    ? "bg-aurora text-primary-foreground glow-primary"
-                    : "glass text-muted-foreground hover:text-foreground"
+                    ? "bg-primary text-primary-foreground border-primary"
+                    : "bg-card text-muted-foreground border-border hover:text-foreground hover:border-primary/40"
                 }`}
               >
                 <c.icon className="h-3.5 w-3.5" />
