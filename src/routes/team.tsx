@@ -62,7 +62,7 @@ function Team() {
                 <div className="flex items-center justify-between pt-4 border-t border-border/40">
                   <div className="flex gap-1.5">
                     {[Github, Linkedin, Twitter].map((Icon, k) => (
-                      <a key={k} href="#" aria-label="social" className="h-7 w-7 rounded-md glass flex items-center justify-center hover:text-primary transition-colors">
+                      <a key={k} href="#" aria-label="social" className="h-7 w-7 rounded-md bg-muted border border-border flex items-center justify-center hover:text-primary hover:border-primary/40 transition-colors">
                         <Icon className="h-3.5 w-3.5" />
                       </a>
                     ))}
