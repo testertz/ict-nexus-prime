@@ -63,7 +63,7 @@ function Projects() {
 
       <Section>
         {/* Controls */}
-        <div className="glass rounded-2xl p-4 mb-8">
+        <div className="bg-card border border-border rounded-2xl p-4 mb-8">
           <div className="flex flex-col md:flex-row gap-4">
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
@@ -80,10 +80,10 @@ function Projects() {
               <button
                 key={c.name}
                 onClick={() => setActive(c.name)}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all border ${
                   active === c.name
-                    ? "bg-aurora text-primary-foreground glow-primary"
-                    : "glass text-muted-foreground hover:text-foreground"
+                    ? "bg-primary text-primary-foreground border-primary"
+                    : "bg-card text-muted-foreground border-border hover:text-foreground hover:border-primary/40"
                 }`}
               >
                 <c.icon className="h-3.5 w-3.5" />
@@ -101,12 +101,12 @@ function Projects() {
               layout
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: i * 0.04 }}
-              className="group glass rounded-2xl overflow-hidden hover:shadow-elevated transition-all"
+              className="group bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/40 transition-all"
             >
-              <div className={`relative h-40 bg-gradient-to-br ${p.color} overflow-hidden`}>
+              <div className="relative h-40 bg-muted border-b border-border overflow-hidden">
                 <div className="absolute inset-0 grid-bg opacity-30" />
-                <Code2 className="absolute inset-0 m-auto h-14 w-14 text-primary-foreground/70 group-hover:scale-110 transition-transform" />
-                <div className="absolute top-3 left-3 px-2 py-1 rounded-md glass text-[10px] font-semibold uppercase">{p.category}</div>
+                <Code2 className="absolute inset-0 m-auto h-14 w-14 text-primary/60 group-hover:scale-110 transition-transform" />
+                <div className="absolute top-3 left-3 px-2 py-1 rounded-md bg-background/80 border border-border text-[10px] font-semibold uppercase">{p.category}</div>
                 {p.trending && (
                   <div className="absolute top-3 right-3 px-2 py-1 rounded-md bg-warning/90 text-warning-foreground text-[10px] font-bold uppercase flex items-center gap-1">
                     <TrendingUp className="h-3 w-3" /> Trending
